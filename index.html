@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    <input type="text" id="NAME" placeholder="Enter your name" required>
+    <input type="text" id="profession" placeholder="enter your profession" required>
+    <input type="number" id="AGE" placeholder="enter your age" required><br>
+    <button onclick="getdata()">Submit</button>
+    <p id="para"></p>
+
+
+</body>
+<script>
+    function getdata(params) {
+        document.getElementById('para').innerHTML = '';
+        const name = document.getElementById('name').value;
+        const profession = document.getElementById('profession').value;
+        const age = document.getElementById('age').value;
+        if (!name || !profession || !age) {
+            document.getElementById('para').innerHTML = 'Error: Please provide all details';
+        }
+    }
+</script>
+
+</html>
